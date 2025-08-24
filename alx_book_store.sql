@@ -9,19 +9,19 @@ CREATE TABLE Authors (
 
 -- 2) Customers
 CREATE TABLE Customers (
-  customer_id    INT PRIMARY KEY,
-  customer_name  VARCHAR(215),
-  email          VARCHAR(215),
-  address        TEXT
+  customer_id   INT PRIMARY KEY,
+  customer_name VARCHAR(215),
+  email VARCHAR(215),
+  address TEXT
 );
 
 -- 3) Books
 CREATE TABLE Books (
-  book_id            INT PRIMARY KEY,
-  title              VARCHAR(130),
-  author_id          INT,
-  price              DOUBLE,
-  publication_date   DATE,
+  book_id  INT PRIMARY KEY,
+  title VARCHAR(130),
+  author_id INT,
+  price DOUBLE,
+  publication_date DATE,
   FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
